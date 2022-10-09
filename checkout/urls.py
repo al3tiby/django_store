@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-# Donjnr
+from . import views
+
 
 urlpatterns = [
+    path('order/', views.make_order, name='checkout.order')
 ]
