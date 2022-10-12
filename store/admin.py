@@ -24,3 +24,6 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(models.Slider)
 class CategoryAdmin(admin.ModelAdmin):
     list_per_page = 20
+
+
+

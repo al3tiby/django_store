@@ -20,7 +20,7 @@ from django_store import settings
 
 urlpatterns = [
     path('', include('store.urls')),
-    path('', include('checkout.urls')),
+    path('checkout/', include('checkout.urls')),
 
     path('admin/', admin.site.urls),
 

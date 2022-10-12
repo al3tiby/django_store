@@ -132,3 +132,23 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# Email Configrations
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = 'd69342712598a8'
+EMAIL_HOST_PASSWORD = '1ee4aa4abbae55'
+EMAIL_PORT = '2525'
+
+
+SITE_URL = 'http://127.0.0.1:8000'
+
+
+
+
+# STRIPE
+STRIPE_PUBLISHABLE_KEY='pk_test_51LrkCWLfmxyYAt6xIV8Y94ZyPjfsQ4HlbFP571eBjUZS83RtoEwOESaXREEGtxYTZO6c7W7WrlgcNDTJicldGWzp00iSj2A6t5'
+STRIPE_SECRET_KEY='sk_test_51LrkCWLfmxyYAt6x7g4ZW4QGzVNnJ02a65YnW9lPPn2dnGDCYIi3DlsMuJsum5KRxV5BVWjcanakLuaX7syzfJAC00hzJVNjf5'
+
+CURRENCY='USD'

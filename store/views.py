@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.utils.translation import gettext as ___
 from .models import Product, Slider, Category, Cart
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 
 
 def index(request):
@@ -108,4 +110,17 @@ def checkout(request):
 def checkout_complete(request):
     return render(
         request, 'checkout-complete.html'
+    )
+
+
+
+
+def send_order_email():
+    msg_html = render_to_string('emails/order.html')
+    send_mail(
+        subject='New Order',
+        html_message=msg_html,
+        message=msg_html,
+        from_email='noreplay@example.com',
+        recipient_list=['customer@example.com']
     )
