@@ -22,7 +22,8 @@ async function cartEmpty() {
 function switchPaymentMethod(type, content) {
    const stripeCard = document.getElementById('stripe-card');
    const stripePaymentElement = document.getElementById('payment-element');
-   const paypalCard = document.getElementById('paypal-card');
+   // const paypalCard = document.getElementById('paypal-card');
+    const paypalCard = document.getElementById('pm-stripe');
    if (type === 'stripe') {
        paypalCard.style.display = 'none'
        stripeCard.style.display = 'block'
