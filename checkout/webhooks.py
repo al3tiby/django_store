@@ -25,6 +25,7 @@ def stripe_webhook(request):
     if event.type == 'payment_intent.succeeded':
         payment_intent = event.data.object
         print('payment_intent.succeeded')
+        print(payment_intent.metadata)
         transaction_id = payment_intent.metadata.transaction
         # make_order(transaction_id)
     # ... handle other event types
