@@ -40,7 +40,7 @@ async function createPaypalSession() {
    try {
        const form = document.getElementById('form-user-info');
        const formData = new FormData(form);
-       const { data } = await axios.post("/checkout/paypal", formData);
+       const { data } = await axios.post("/checkout/paypal/", formData);
        switchPaymentMethod('paypal', data)
    } catch (e) {
        notyf.error(e.response.data.message);
