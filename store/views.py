@@ -116,12 +116,3 @@ def checkout_complete(request):
 
 
 
-def send_order_email():
-    msg_html = render_to_string('emails/order.html')
-    send_mail(
-        subject='New Order',
-        html_message=msg_html,
-        message=msg_html,
-        from_email='noreplay@example.com',
-        recipient_list=['customer@example.com']
-    )
