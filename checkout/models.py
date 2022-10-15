@@ -25,7 +25,7 @@ class Transaction(models.Model):
         choices=TransactionStatus.choices, default=TransactionStatus.Pending
     )
     payment_method = models.IntegerField(
-        choices=TransactionStatus.choices
+        choices=PaymentMethod.choices
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
