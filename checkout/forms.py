@@ -45,7 +45,7 @@ class UserInfoForm(forms.Form):
 
 class MyPayPalPaymentsForm(PayPalPaymentsForm):
     def render(self, *args, **kwargs):
-        if not args and kwargs:
+        if not args and not kwargs:
             return format_html(u"""<form action="{0}" method="post">
             {1}
             <div class="d-grid gap-2 my-3">
