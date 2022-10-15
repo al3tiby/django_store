@@ -33,7 +33,7 @@
 from django import forms
 from django.utils.html import format_html
 from paypal.standard.forms import PayPalPaymentsForm
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext as ___
 
 
 class UserInfoForm(forms.Form):
@@ -42,13 +42,17 @@ class UserInfoForm(forms.Form):
     email = forms.EmailField()
 
 
+
 class MyPayPalPaymentsForm(PayPalPaymentsForm):
-    def render(self):
-        return format_html(u"""<form action="{0}" method="post">
-        {1}
-        <div class="d-grid gap-2 my-3">
-            <button class="btn btn-primary" type="submit">
-                <i class="lni lni-paypal-original"></i> {2}
-            </button>
-        </div>
-    </form>""", self.get_login_url(), self.as_p(),  _('Pay Now'))
+    def render(self, *args, **kwargs):
+        if not args and kwargs:
+            return format_html(u"""<form action="{0}" method="post">
+            {1}
+            <div class="d-grid gap-2 my-3">
+                <button class="btn btn-primary" type="submit">
+                    <i class="lni lni-paypal-original"></i> {2}
+                </button>
+            </div>
+        </form>""", self.get_login_url(), self.as_p(),  ___('Pay Now'))
+        else:
+            return super().render(*args, **kwargs)
