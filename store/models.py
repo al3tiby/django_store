@@ -1,6 +1,6 @@
 from django.contrib.sessions.models import Session
 from django.db import models
-
+from django.utils.translation import gettext as _
 from checkout.models import Transaction
 from django_store import settings
 
@@ -18,6 +18,10 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = _('Category')
+        verbose_name_plural = _('Categories')
+
 
 
 class Author(models.Model):
@@ -28,6 +32,10 @@ class Author(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = _('Author')
+        verbose_name_plural = _('Authors')
 
 
 
@@ -51,6 +59,10 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = _('Product')
+        verbose_name_plural = _('Products')
+
 
 
 
@@ -62,6 +74,10 @@ class Order(models.Model):
 
     def __str__(self):
         return str(self.id)
+
+    class Meta:
+        verbose_name = _('Order')
+        verbose_name_plural = _('Orders')
 
 
 
@@ -77,6 +93,10 @@ class Cart(models.Model):
     items = models.JSONField(default=dict)
     session = models.ForeignKey(Session, on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name = _('Cart')
+        verbose_name_plural = _('Carts')
+
 
 
 class Slider(models.Model):
@@ -89,3 +109,7 @@ class Slider(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        verbose_name = _('Slider')
+        verbose_name_plural = _('Sliders')

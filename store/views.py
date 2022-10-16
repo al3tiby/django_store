@@ -1,7 +1,7 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render
 from django.http import JsonResponse
-from django.utils.translation import gettext as ___
+from django.utils.translation import gettext as _
 from .models import Product, Slider, Category, Cart
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
@@ -75,7 +75,7 @@ def cart_update(request, pid):
         cart_model.save()
 
     return JsonResponse({
-        'message': ___('The product has been added to your cart.'),
+        'message': _('The product has been added to your cart.'),
         'items_count': len(cart_model.items)
     })
 
@@ -94,7 +94,7 @@ def cart_remove(request, pid):
         cart_model.save()
 
     return JsonResponse({
-        'message': ___('The product has been removed from your cart.'),
+        'message': _('The product has been removed from your cart.'),
         'items_count': len(cart_model.items)
     })
 

@@ -1,16 +1,16 @@
 from django.db import models
-from django.utils.translation import gettext as ___
+from django.utils.translation import gettext as _
 
 
 
 class TransactionStatus(models.IntegerChoices):
-    Pending = 0, ___('Pending')
-    Completed = 1, ___('Completed')
+    Pending = 0, _('Pending')
+    Completed = 1, _('Completed')
 
 
 class PaymentMethod(models.IntegerChoices):
-    Stripe = 1, ___('Stripe')
-    Paypal = 2, ___('PayPal')
+    Stripe = 1, _('Stripe')
+    Paypal = 2, _('PayPal')
 
 
 

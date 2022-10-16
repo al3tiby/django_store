@@ -5,7 +5,7 @@ import json
 from reports.models import OrderReport
 from store.models import Order
 from django.template.response import TemplateResponse
-from django.utils.translation import gettext_lazy as ___
+from django.utils.translation import gettext_lazy as _
 
 
 @admin.register(OrderReport)
@@ -50,7 +50,7 @@ class OrderAdmin(admin.ModelAdmin):
             'yearly_stats': json.dumps(list(yearly_stats)),
             'monthly_stats': json.dumps(list(monthly_stats)),
             'weekly_stats': json.dumps(list(weekly_stats)),
-            'title': ___('Orders Report')
+            'title': _('Orders Report')
         }
 
         return TemplateResponse(
