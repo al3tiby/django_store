@@ -27,7 +27,6 @@ SECRET_KEY = 'django-insecure-bs&y_xi6tycrp9#1=kf-4u=5ogk#ojp!$&w&n&rq108we_js&l
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '3toby-store.com',
     ".localhost",
     '127.0.0.1'
 ]
@@ -144,8 +143,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email Configrations
 EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = 'd69342712598a8'
-EMAIL_HOST_PASSWORD = '1ee4aa4abbae55'
+EMAIL_HOST_USER = '######################'
+EMAIL_HOST_PASSWORD = '######################'
 EMAIL_PORT = '2525'
 
 
@@ -155,9 +154,9 @@ SITE_URL = 'http://127.0.0.1:8000'
 
 
 # STRIPE
-STRIPE_PUBLISHABLE_KEY='pk_test_51LrkCWLfmxyYAt6xIV8Y94ZyPjfsQ4HlbFP571eBjUZS83RtoEwOESaXREEGtxYTZO6c7W7WrlgcNDTJicldGWzp00iSj2A6t5'
-STRIPE_SECRET_KEY='sk_test_51LrkCWLfmxyYAt6x7g4ZW4QGzVNnJ02a65YnW9lPPn2dnGDCYIi3DlsMuJsum5KRxV5BVWjcanakLuaX7syzfJAC00hzJVNjf5'
-STRIPE_ENDPOINT_SECRET='whsec_df9cfd7225aabc68bca05babfc6b55a2246c8b4e070b1794bea84d3659457368'
+STRIPE_PUBLISHABLE_KEY='##############################################################################################################'
+STRIPE_SECRET_KEY='##############################################################################################################'
+STRIPE_ENDPOINT_SECRET='##################################################################'
 
 PAYPAL_TEST = True
 PAYPAL_EMAIL = 'sb-ketez21607115@business.example.com'
